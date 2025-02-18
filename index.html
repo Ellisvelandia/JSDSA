@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Javascript</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <input type="number" id="firstNumber" placeholder="Enter first number" />
+      <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input
+        type="number"
+        id="secondNumber"
+        placeholder="Enter second number"
+      />
+      <button id="calculate">Calculate</button>
+      <p id="result"> Result: </p>
+    </div>
     <!-- <script src="main.js"></script> -->
     <script src="script.js"></script>
   </body>
