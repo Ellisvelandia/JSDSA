@@ -91,10 +91,48 @@ function play_game(choice, computer_choice) {
   }
   //then we need to print the result
 }
-//there is a error in choice 
+//there is a error in choice
 //how i can fix the error?
 //how i can use the function to play the game?
 //provide some example for use the function to play the game
 
-
 alert("Thanks for playing!");
+
+//Aritmetic operators
+// + - * / % ++ --
+//explain me the aritmetic operators
+//the aritmetic operators are used to perform mathematical operations on numbers.
+//the + operator is used to add two numbers together.
+//the - operator is used to subtract one number from another.
+//the * operator is used to multiply two numbers together.
+//the / operator is used to divide one number by another.
+//the % operator is used to return the remainder of a division.
+//the ++ operator is used to increment a number by one.
+//the -- operator is used to decrement a number by one.
+
+//logical operators
+// && || !
+//explain me the logical operators
+//the logical operators are used to combine two or more conditions and return a boolean value.
+//the && operator is used to combine two conditions and return true if both conditions are true.
+//the || operator is used to combine two conditions and return true if either condition is true.
+//the ! operator is used to negate a condition and return the opposite boolean value.
+
+//comparison operators
+// == === != !== > < >= <=
+//explain me the comparison operators
+//the comparison operators are used to compare two values and return a boolean value.
+//the == operator is used to compare two values and return true if they are equal.
+//the === operator is used to compare two values and return true if they are equal and of the same type.
+//the != operator is used to compare two values and return true if they are not equal.
+//the !== operator is used to compare two values and return true if they are not equal or of different types.
+//the > operator is used to compare two values and return true if the first value is greater than the second value.
+//the < operator is used to compare two values and return true if the first value is less than the second value.
+//the >= operator is used to compare two values and return true if the first value is greater than or equal to the second value.
+//the <= operator is used to compare two values and return true if the first value is less than or equal to the second value.
+
+//ternary operator
+//explain me the ternary operator
+//the ternary operator is used to return a value based on a condition.
+//the condition is evaluated and if it is true, the first value is returned, otherwise the second value is returned.
+//it is a shorthand way of writing an if-else statement.  
