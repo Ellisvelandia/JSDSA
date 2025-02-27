@@ -70,8 +70,41 @@ const nums2 = [6, 7, 8, 9, 10];
 
 // console.log(finalNums);
 
-function sum(...numbers) {
-  return numbers;
-}
+// function sum(...numbers) {
+//   return numbers;
+// }
 
-console.log(sum(nums, nums2, "ellis"));
+// console.log(sum(nums, nums2, "ellis"));
+
+//concat
+
+// const newArray = nums.concat(nums2); //concat method to merge two arrays into one array.
+
+// console.log(newArray);
+
+//Slice
+//The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+// const newArray = fruits.slice(1, 3); //slice method to copy a portion of an array into a new array.
+// console.log(newArray);
+
+// const newArray2 = fruits.slice(-2); //slice method to copy a portion of an array into a new array.
+// console.log(newArray2);
+
+//splice
+
+// const newArray = fruits.splice(1, 2); //splice method to remove a portion of an array into a new array.
+// console.log(newArray);
+
+
+// const newArray = fruits.splice(-2); //splice method to remove a portion of an array into a new array.
+// console.log(newArray);
+
+
+//fill
+
+// const newArray = nums.fill(0); //fill method to fill an array with a value.
+// console.log(newArray);
+
+// const newArray = nums.fill(0, 2, 4); //fill method to fill an array with a value.
+// console.log(newArray);
