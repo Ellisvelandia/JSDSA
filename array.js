@@ -63,8 +63,8 @@ fruits.shift();
 
 //Spread Operator and Rest Operator
 
-const nums = [1, 2, 3, 4, 5];
-const nums2 = [6, 7, 8, 9, 10];
+// const nums = [1, 2, 3, 4, 5];
+// const nums2 = [6, 7, 8, 9, 10];
 
 // const finalNums = [...nums, ...nums2]; //spread operator
 
@@ -96,10 +96,8 @@ const nums2 = [6, 7, 8, 9, 10];
 // const newArray = fruits.splice(1, 2); //splice method to remove a portion of an array into a new array.
 // console.log(newArray);
 
-
 // const newArray = fruits.splice(-2); //splice method to remove a portion of an array into a new array.
 // console.log(newArray);
-
 
 //fill
 
@@ -108,3 +106,11 @@ const nums2 = [6, 7, 8, 9, 10];
 
 // const newArray = nums.fill(0, 2, 4); //fill method to fill an array with a value.
 // console.log(newArray);
+
+//flat
+
+const flatExample = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, 12]]]];
+
+const flattendArray = flatExample.flat(2); //flat method to flatten an array.
+console.log(flattendArray);
+
