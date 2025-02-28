@@ -190,37 +190,129 @@ const programmingLanguages = [
 
 //problem find if a number exists in an array.
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const searchNumber = 7;
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const searchNumber = 7;
 
-function findNumber(arr, numberToFind) {
-  //verify inputs
-  console.log("🔍 Let me check what I'm working with:");
-  console.log("→ My array is:", arr);
-  console.log("→ I'm looking for:", numberToFind);
+// function findNumber(arr, numberToFind) {
+//   //verify inputs
+//   console.log("🔍 Let me check what I'm working with:");
+//   console.log("→ My array is:", arr);
+//   console.log("→ I'm looking for:", numberToFind);
 
-  //check for obvious problems
-  if (arr.length === 0) {
-    console.log("❌ Oops! The array is empty!");
-    return false;
-  }
+//   //check for obvious problems
+//   if (arr.length === 0) {
+//     console.log("❌ Oops! The array is empty!");
+//     return false;
+//   }
 
-  //solve the problem in tiny steps
-  console.log("👀 Let me look at each number one by one:");
+//   //solve the problem in tiny steps
+//   console.log("👀 Let me look at each number one by one:");
 
-  for (let i = 0; i < arr.length; i++) {
-    let currentNumber = arr[i];
+//   for (let i = 0; i < arr.length; i++) {
+//     let currentNumber = arr[i];
 
-    console.log(`   Looking at position ${i}: The number is ${currentNumber}`);
+//     console.log(`   Looking at position ${i}: The number is ${currentNumber}`);
 
-    if (currentNumber === numberToFind) {
-      console.log(`✅ Found ${numberToFind} at position ${i}!`);
-      return true;
-    }
+//     if (currentNumber === numberToFind) {
+//       console.log(`✅ Found ${numberToFind} at position ${i}!`);
+//       return true;
+//     }
     
-  }
-  console.log(`❌ Sorry, couldn't find ${numberToFind} in the array`);
-  return false;
+//   }
+//   console.log(`❌ Sorry, couldn't find ${numberToFind} in the array`);
+//   return false;
+// }
+
+// console.log(findNumber(numbers, searchNumber));
+
+
+// Let's make a silly pizza order validator!
+function checkPizzaOrder(toppings, size, isStuffedCrust) {
+    // STEP 1: ANNOUNCE OURSELVES DRAMATICALLY
+    console.log("🍕 WELCOME TO THE PIZZA POLICE DEPARTMENT 🚨");
+    console.log("⭐ Investigating your pizza order with utmost seriousness...");
+
+    // STEP 2: CHECK THE EVIDENCE
+    console.log("\n🔍 EXAMINING THE SUSPECT (I mean, pizza):");
+    console.log(`   Size: ${size}`);
+    console.log(`   Toppings: ${toppings}`);
+    console.log(`   Stuffed Crust: ${isStuffedCrust ? "YES!" : "Nope"}`);
+
+    // STEP 3: INVESTIGATE EACH ASPECT
+    let violations = [];
+
+    // Check Size
+    if (!size) {
+        violations.push("📏 SIZE VIOLATION: You forgot to specify a size! What is this, a pizza for ants?");
+    }
+
+    // Check Toppings
+    if (!toppings || toppings.length === 0) {
+        violations.push("🧀 TOPPING VIOLATION: A naked pizza? That's just sad bread!");
+    }
+
+    // The Pineapple Investigation
+    if (toppings.includes("pineapple")) {
+        console.log("🍍 !!! PINEAPPLE DETECTED !!! Launching special investigation...");
+        console.log("   * Checking international pizza laws...");
+        console.log("   * Consulting with Italian grandmothers...");
+        console.log("   * Result: It's controversial, but we'll allow it 😅");
+    }
+
+    // Too Many Toppings Protocol
+    if (toppings.length > 5) {
+        violations.push("⚠️ OVERLOAD ALERT: More than 5 toppings? Your pizza needs a weight limit sign!");
+    }
+
+    // STEP 4: DELIVER THE VERDICT
+    console.log("\n👨‍⚖️ PIZZA COURT VERDICT:");
+    
+    if (violations.length === 0) {
+        console.log("✅ CONGRATULATIONS! Your pizza is legally perfect!");
+        console.log("   * Pizza License issued!");
+        console.log("   * You may proceed to deliciousness!");
+        return true;
+    } else {
+        console.log("❌ VIOLATIONS DETECTED!");
+        violations.forEach(violation => console.log(violation));
+        console.log("\n👮 Please fix these issues or face pizza jail!");
+        return false;
+    }
 }
 
-console.log(findNumber(numbers, searchNumber));
+// Let's test some pizza orders!
+console.log("\n=== Test Case 1: The Good Pizza ===");
+checkPizzaOrder(["cheese", "pepperoni", "mushrooms"], "large", true);
+
+console.log("\n=== Test Case 2: The Criminal Pizza ===");
+checkPizzaOrder([], "small", false);
+
+console.log("\n=== Test Case 3: The Controversial Pizza ===");
+checkPizzaOrder(["cheese", "pineapple", "ham"], "medium", true);
+
+console.log("\n=== Test Case 4: The Excessive Pizza ===");
+checkPizzaOrder(
+    ["cheese", "pepperoni", "mushrooms", "olives", "onions", "peppers", "anchovies"],
+    "large",
+    true
+);
+
+// Bonus: Pizza Order Generator
+function generateRandomPizza() {
+    const possibleToppings = ["cheese", "pepperoni", "mushrooms", "pineapple", "olives", "anchovies"];
+    const sizes = ["small", "medium", "large", "ABSOLUTELY MASSIVE"];
+    
+    const randomToppings = possibleToppings
+        .sort(() => Math.random() - 0.5)
+        .slice(0, Math.floor(Math.random() * 4) + 1);
+    
+    const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+    const randomCrust = Math.random() > 0.5;
+
+    console.log("\n🎲 RANDOM PIZZA GENERATOR 🎲");
+    return checkPizzaOrder(randomToppings, randomSize, randomCrust);
+}
+
+// Generate a random pizza order!
+console.log("\n=== SURPRISE PIZZA ===");
+generateRandomPizza();
