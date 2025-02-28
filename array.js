@@ -109,8 +109,81 @@ fruits.shift();
 
 //flat
 
-const flatExample = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, 12]]]];
+// const flatExample = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, 12]]]];
 
-const flattendArray = flatExample.flat(2); //flat method to flatten an array.
-console.log(flattendArray);
+// const flattendArray = flatExample.flat(2); //flat method to flatten an array.
+// console.log(flattendArray);
 
+
+const programmingLanguages = [
+  "JavaScript",
+  "Python",
+  "Java",
+  "C#",
+  "C++",
+  "PHP",
+  "Ruby",
+  "Swift",
+  "Go",
+  "Kotlin",
+];
+
+// const programingReverse = programmingLanguages.reverse(); //reverse method to reverse an array.
+// console.log(programingReverse);
+
+// const programmingSort = programmingLanguages.sort( (a, b) => a.localeCompare(b)); //sort method to sort an array.
+// console.log(programmingSort);
+
+// const programmingJoin = programmingLanguages.join(" - "); //join method to join an array.
+// console.log(programmingJoin);
+
+//problem1: Find the smallest number in an array.
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+//Create a function that will find the small number in an array.
+
+function findSmallestNumber(arr) {
+  //Create a variable to store the smallest number we've seen.
+  let smallest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    let currentNumber = arr[i];
+    if (currentNumber < smallest) {
+      smallest = currentNumber;
+    }
+  }
+  return smallest;
+}
+
+console.log(findSmallestNumber(numbers));
+
+//Create a function that will find the largest number in an array.
+
+// function findLargestNumber(arr) {
+//   //Create a variable to store the largest number we've seen.
+//   let largest = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let currentNumber = arr[i];
+//     if (currentNumber > largest) {
+//       largest = currentNumber;
+//     }
+//   }
+//   return largest;
+// }
+
+// console.log(findLargestNumber(numbers));
+
+// function countEvenNumbers(arr) {
+//   let eventCount = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     let currentNumber = arr[i];
+//     if (currentNumber % 2 === 0) {
+//       eventCount = eventCount + 1;
+//     }
+//   }
+//   return eventCount;
+// }
+
+// console.log(countEvenNumbers(numbers));
