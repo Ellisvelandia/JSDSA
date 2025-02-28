@@ -139,24 +139,24 @@ const programmingLanguages = [
 
 //problem1: Find the smallest number in an array.
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
-//Create a function that will find the small number in an array.
+// //Create a function that will find the small number in an array.
 
-function findSmallestNumber(arr) {
-  //Create a variable to store the smallest number we've seen.
-  let smallest = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    let currentNumber = arr[i];
-    if (currentNumber < smallest) {
-      smallest = currentNumber;
-    }
-  }
-  return smallest;
-}
+// function findSmallestNumber(arr) {
+//   //Create a variable to store the smallest number we've seen.
+//   let smallest = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     let currentNumber = arr[i];
+//     if (currentNumber < smallest) {
+//       smallest = currentNumber;
+//     }
+//   }
+//   return smallest;
+// }
 
-console.log(findSmallestNumber(numbers));
+// console.log(findSmallestNumber(numbers));
 
 //Create a function that will find the largest number in an array.
 
@@ -187,3 +187,40 @@ console.log(findSmallestNumber(numbers));
 // }
 
 // console.log(countEvenNumbers(numbers));
+
+//problem find if a number exists in an array.
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const searchNumber = 7;
+
+function findNumber(arr, numberToFind) {
+  //verify inputs
+  console.log("🔍 Let me check what I'm working with:");
+  console.log("→ My array is:", arr);
+  console.log("→ I'm looking for:", numberToFind);
+
+  //check for obvious problems
+  if (arr.length === 0) {
+    console.log("❌ Oops! The array is empty!");
+    return false;
+  }
+
+  //solve the problem in tiny steps
+  console.log("👀 Let me look at each number one by one:");
+
+  for (let i = 0; i < arr.length; i++) {
+    let currentNumber = arr[i];
+
+    console.log(`   Looking at position ${i}: The number is ${currentNumber}`);
+
+    if (currentNumber === numberToFind) {
+      console.log(`✅ Found ${numberToFind} at position ${i}!`);
+      return true;
+    }
+    
+  }
+  console.log(`❌ Sorry, couldn't find ${numberToFind} in the array`);
+  return false;
+}
+
+console.log(findNumber(numbers, searchNumber));
